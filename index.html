@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEasy Demo - E-commerce Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ShopEasy</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#github-info">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>ShopEasy E-Commerce Platform</h2>
+                <p>A complete solution for your online store</p>
+                <a href="#features" class="btn">Explore Features</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2 class="section-title">Platform Features</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Intuitive Shopping Cart</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Responsive</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Admin Dashboard</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Product Search & Filtering</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Secure Checkout</h3>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-tags"></i>
+                    <h3>Categories & Tags</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div id="featured-products-container" class="products-grid">
+                <!-- Products will be loaded here from JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" data-category="electronics">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Electronics</h3>
+                </div>
+                <div class="category-card" data-category="clothing">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Clothing</h3>
+                </div>
+                <div class="category-card" data-category="home">
+                    <i class="fas fa-home"></i>
+                    <h3>Home & Kitchen</h3>
+                </div>
+                <div class="category-card" data-category="books">
+                    <i class="fas fa-book"></i>
+                    <h3>Books</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="github-info">
+        <div class="container">
+            <h2 class="section-title">About This Project</h2>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p>ShopEasy is a complete e-commerce solution built with HTML, CSS, and JavaScript. This demo showcases the main features of the platform.</p>
+                <p>The full version includes:</p>
+                <ul style="display: inline-block; text-align: left; margin-top: 20px;">
+                    <li>Complete product catalog with search and filtering</li>
+                    <li>User authentication and profiles</li>
+                    <li>Shopping cart and checkout process</li>
+                    <li>Admin dashboard for product management</li>
+                    <li>Responsive design for all devices</li>
+                    <li>Order tracking and history</li>
+                </ul>
+                <div style="margin-top: 30px;">
+                    <a href="https://github.com/AJ-Adi" class="btn" style="margin-right: 10px;">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                    <a href="#" class="btn" style="background: #28a745;">
+                        Get Full Version
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ShopEasy</h3>
+                    <p>Your one-stop shop for quality products at affordable prices.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#github-info">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> info@shopeasy.com</p>
+                    <p><i class="fas fa-globe"></i> www.shopeasy.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShopEasy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/demo.js"></script>
+    <script>
+        // Active navigation highlight
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all sections
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+            
+            // Add scroll event listener
+            window.addEventListener('scroll', function() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 150)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    const href = link.getAttribute('href');
+                    if (href === '#' + current || (href === '#' && current === '')) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

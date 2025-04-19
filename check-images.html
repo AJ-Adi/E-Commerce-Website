@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Path Checker</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .image-checker {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .image-container {
+            height: 200px;
+            background-color: #f0f2ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        .image-container img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        h1, h2 {
+            color: #4a6de5;
+        }
+        .status {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .success {
+            background-color: #e6ffe6;
+            color: #28a745;
+        }
+        .fail {
+            background-color: #ffe6e6;
+            color: #dc3545;
+        }
+        .path {
+            font-family: monospace;
+            background-color: #f5f5f5;
+            padding: 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ShopEasy Image Path Checker</h1>
+    <p>This tool helps verify if your product images are in the correct location and format.</p>
+    
+    <div class="image-checker">
+        <h2>1. Headphones</h2>
+        <div class="image-container">
+            <img src="img/headphones.jpg" alt="Headphones" id="img1">
+        </div>
+        <p>Expected path: <span class="path">DEMO/img/headphones.jpg</span></p>
+        <div id="status1" class="status">Checking...</div>
+    </div>
+    
+    <div class="image-checker">
+        <h2>2. Smartphone</h2>
+        <div class="image-container">
+            <img src="img/smartphone.jpg" alt="Smartphone" id="img2">
+        </div>
+        <p>Expected path: <span class="path">DEMO/img/smartphone.jpg</span></p>
+        <div id="status2" class="status">Checking...</div>
+    </div>
+    
+    <div class="image-checker">
+        <h2>3. T-Shirt</h2>
+        <div class="image-container">
+            <img src="img/tshirt.jpg" alt="T-Shirt" id="img3">
+        </div>
+        <p>Expected path: <span class="path">DEMO/img/tshirt.jpg</span></p>
+        <div id="status3" class="status">Checking...</div>
+    </div>
+    
+    <div class="image-checker">
+        <h2>4. Coffee Maker</h2>
+        <div class="image-container">
+            <img src="img/coffeemaker.jpg" alt="Coffee Maker" id="img4">
+        </div>
+        <p>Expected path: <span class="path">DEMO/img/coffeemaker.jpg</span></p>
+        <div id="status4" class="status">Checking...</div>
+    </div>
+    
+    <div class="image-checker">
+        <h2>5. Novel</h2>
+        <div class="image-container">
+            <img src="img/novel.jpg" alt="Novel" id="img5">
+        </div>
+        <p>Expected path: <span class="path">DEMO/img/novel.jpg</span></p>
+        <div id="status5" class="status">Checking...</div>
+    </div>
+    
+    <div class="image-checker">
+        <h2>6. Smartwatch</h2>
+        <div class="image-container">
+            <img src="img/smartwatch.jpg" alt="Smartwatch" id="img6">
+        </div>
+        <p>Expected path: <span class="path">DEMO/img/smartwatch.jpg</span></p>
+        <div id="status6" class="status">Checking...</div>
+    </div>
+    
+    <h2>Troubleshooting Tips</h2>
+    <ul>
+        <li>Make sure all images are in the <span class="path">DEMO/img/</span> folder</li>
+        <li>Check that the filenames match exactly: lowercase and correct extension (.jpg)</li>
+        <li>Ensure images are properly formatted JPG files (not text files with .jpg extension)</li>
+        <li>Try using 500×500px square images for best results</li>
+        <li>Image file size should ideally be under 300KB</li>
+    </ul>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check each image
+            checkImage('img1', 'status1');
+            checkImage('img2', 'status2');
+            checkImage('img3', 'status3');
+            checkImage('img4', 'status4');
+            checkImage('img5', 'status5');
+            checkImage('img6', 'status6');
+        });
+        
+        function checkImage(imgId, statusId) {
+            const img = document.getElementById(imgId);
+            const status = document.getElementById(statusId);
+            
+            img.onload = function() {
+                status.textContent = 'SUCCESS: Image loaded correctly ✓';
+                status.className = 'status success';
+            };
+            
+            img.onerror = function() {
+                status.textContent = 'FAILED: Could not load image ✗';
+                status.className = 'status fail';
+            };
+        }
+    </script>
+</body>
+</html> 
