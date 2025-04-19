@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initCategoryCards();
     
     // Log to console to help debugging
-    // console.log("Demo initialized, checking for images...");
+    console.log("Demo initialized, checking for images...");
 });
 
 // Display featured products in the container
