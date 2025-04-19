@@ -6,38 +6,45 @@ Welcome to the **ShopEasy** demo – a responsive and beginner-friendly e-commer
 
 ---
 
-## 📌 Features
+## 📌 Current Features
 
-This demo showcases the core features of a functional e-commerce platform:
+The demo currently implements:
 
-- 🛍️ **Product Listings** with prices, images, and descriptions
-- 🛒 **Add to Cart** functionality
-- 🧾 **Cart Page** with item management and total calculation
-- 🔍 **Basic Product Search & Filter**
-- 📱 **Responsive Layout** (Mobile, Tablet, and Desktop)
-- 💡 **Clean UI** using **TailwindCSS**
-- ⚙️ **LocalStorage** to persist cart data
+- 🛍️ **Product Listings** with product cards showing names, prices, and images
+- 💡 **Featured Products Section** displaying selected items
+- 📱 **Responsive Layout** that works on mobile, tablet, and desktop
+- 📂 **Product Categories** display with Electronics, Clothing, Home & Kitchen, and Books
+- 📊 **Static Product Data** managed through JavaScript
+- 🖼️ **Image Loading System** with error handling and placeholders
+- 🎨 **Clean UI** with modern design elements
+- 🔄 **Interactive Elements** with hover effects and visual feedback
 
 ---
 
 ## 💼 Tech Stack
 
 - **HTML5**
-- **TailwindCSS**
+- **CSS** (with custom styling)
 - **Vanilla JavaScript**
-- **LocalStorage** (for managing cart data)
+- No backend implementation in the demo version
 
 ---
 
-## 🚀 In Full Version
+## 🚀 Full Version Features
 
-- User Login & Registration
-- Product Categories & Tags
-- Admin Dashboard
-- Order Tracking System
-- Payment Integration
-- Search & Filter by Category or Price
-- Wishlist functionality
+The full version would include:
+
+- 👤 **User Authentication** (login, registration, profiles)
+- 🛒 **Functional Shopping Cart** with add, remove, and quantity management
+- 💳 **Checkout Process** with payment gateway integration
+- 🔍 **Advanced Search & Filtering** by category, price, and other attributes
+- ⚙️ **Admin Dashboard** for product and order management
+- 📊 **Order Tracking System** for customers
+- 💾 **Backend Database** for product and user data storage
+- 🔐 **Secure Payment Processing**
+- 💌 **Email Notifications** for orders and promotional content
+- ❤️ **Wishlist Functionality** to save items for later
+- 📱 **Fully Optimized Mobile Experience**
 
 ---
 ## 💬 Contact Me
